@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xjeralabs Pte Ltd - Waterjet Cutter Quotation Confirmation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Color Palette from xcare_colors.css */
+        :root {
+            --xcare-blue-900: #27296A;
+            --xcare-gold-600: #BD9B2F;
+            --xcare-gray-700: #474748;
+            --xcare-gray-050: #f5f5f7;
+            --xcare-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--xcare-gray-050);
+            color: var(--xcare-gray-700);
+        }
+        .form-section {
+            border-left: 3px solid var(--xcare-blue-900);
+            padding-left: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .form-label {
+            font-weight: 600;
+            color: #1F2937; /* gray-800 */
+        }
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #D1D5DB; /* gray-300 */
+            border-radius: 0.5rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--xcare-blue-900);
+            box-shadow: 0 0 0 2px rgba(39, 41, 106, 0.2);
+        }
+        .static-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .info-card {
+            background-color: var(--xcare-white);
+            border: 1px solid #E5E7EB; /* gray-200 */
+            border-radius: 0.75rem;
+            padding: 1rem;
+        }
+        .info-card h4 {
+            font-weight: 600;
+            color: var(--xcare-blue-900);
+        }
+        .info-card ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            color: #4B5563; /* gray-600 */
+            margin-top: 0.5rem;
+        }
+        .confirm-checkbox {
+            margin-top: 1rem;
+        }
+        .confirm-checkbox label {
+            margin-left: 0.5rem;
+            color: #374151; /* gray-700 */
+            cursor: pointer;
+        }
+        .submit-button {
+            background-color: var(--xcare-blue-900);
+        }
+        .submit-button:hover {
+            background-color: #1e205a;
+        }
+        .header-accent {
+            color: var(--xcare-blue-900);
+        }
+        /* Modal Styles */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto max-w-5xl p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Xjeralabs Pte Ltd</h1>
+            <p class="text-lg text-gray-600 mt-1">Wet-Blue Leather Pure Waterjet Cutter (Metal Conveyor Belt)</p>
+            <h2 class="text-xl font-semibold header-accent mt-2">Technical & Commercial Confirmation Form</h2>
+        </header>
+
+        <form id="confirmationForm" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+
+            <!-- Form sections remain the same -->
+            <!-- Section: Core Specifications -->
+            <div class="form-section">
+                <h3 class="text-2xl font-bold header-accent mb-4">1. Core Specifications (Baseline)</h3>
+                <div class="static-info-grid">
+                     <div class="info-card">
+                        <h4>Application & Dimensions</h4>
+                        <ul>
+                            <li><strong>Process:</strong> Pure Waterjet (no abrasive)</li>
+                            <li><strong>Cutting Head:</strong> 1 head w/ Z-axis floating & mechanical anti-collision</li>
+                            <li><strong>Effective Area:</strong> 2.5 m × 4.5 m</li>
+                            <li><strong>Footprint:</strong> 4.0 m × 5.5 m (excl. pump room)</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h4>Worktable & Logistics</h4>
+                        <ul>
+                            <li><strong>Type:</strong> Metal Conveyor Belt (Stainless Steel Mesh)</li>
+                            <li><strong>Features:</strong> Continuous infeed/outfeed, variable speed, quick-release for cleaning</li>
+                            <li><strong>Sync:</strong> Encoder sync with vision system</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h4>Performance & Control</h4>
+                        <ul>
+                            <li><strong>Pump:</strong> Intensifier 50–60 HP @ 3,800–4,200 bar</li>
+                            <li><strong>Motion Speed:</strong> ≥ 60 m/min (idle)</li>
+                            <li><strong>Repeatability:</strong> ≤ ±0.05 mm / 1,000 mm</li>
+                            <li><strong>Vision:</strong> Overhead camera (polarized), DXF import</li>
+                            <li><strong>Control:</strong> Industrial CNC + HMI</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h4>System & Safety</h4>
+                        <ul>
+                            <li><strong>Water System:</strong> Closed-loop with multi-stage filtration (to 1 μm) & softener</li>
+                            <li><strong>Safety:</strong> Full enclosure, light curtains, interlocks, E-stop pressure release</li>
+                            <li><strong>Compliance:</strong> CE Certified, IP65 Cabinet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Customer Confirmation -->
+            <div class="form-section">
+                <h3 class="text-2xl font-bold header-accent mb-4">2. Customer Confirmation</h3>
+                <p class="text-gray-600 mb-6">Please review the baseline specifications and provide your operational details below. Fields marked with an asterisk (*) are required.</p>
+                
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4" style="background-color: #f0f3ff;">
+                    <h4 class="form-label mb-2">Confirm Baseline Configuration</h4>
+                    <div class="confirm-checkbox">
+                        <input type="checkbox" id="confirm_area" name="Confirmation: Work Area" value="Confirmed" checked>
+                        <label for="confirm_area">Work Area (2.5×4.5 m) & Footprint (4.0×5.5 m)</label>
+                    </div>
+                    <div class="confirm-checkbox">
+                        <input type="checkbox" id="confirm_conveyor" name="Confirmation: Conveyor Belt" value="Confirmed" checked>
+                        <label for="confirm_conveyor">Metal Conveyor Belt for continuous operation</label>
+                    </div>
+                    <div class="confirm-checkbox">
+                        <input type="checkbox" id="confirm_process" name="Confirmation: Process" value="Confirmed" checked>
+                        <label for="confirm_process">Pure waterjet process (1 cutting head)</label>
+                    </div>
+                    <div class="confirm-checkbox">
+                        <input type="checkbox" id="confirm_consumables" name="Confirmation: Consumables" value="Confirmed" checked>
+                        <label for="confirm_consumables">First-year consumables package (Sapphire nozzles)</label>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="leather_dimensions" class="form-label">Leather Hide Dimensions (Required)</label>
+                        <input type="text" id="leather_dimensions" name="Leather Hide Dimensions" class="form-input mt-1" placeholder="Enter dimensions, e.g., 2.0m x 1.8m x 1.6mm" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Shifts & Target Throughput</label>
+                        <div class="flex items-center space-x-4 mt-1">
+                            <input type="number" id="shifts_per_day" name="Shifts per Day" class="form-input" placeholder="Shifts/day">
+                            <input type="number" id="hides_per_hour" name="Hides per Hour" class="form-input" placeholder="Hides/hour">
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Default estimate for single-head pure waterjet is 8-12 hides/hour.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Contact Information -->
+            <div class="form-section">
+                <h3 class="text-2xl font-bold header-accent mb-4">3. Contact Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="contact_name" class="form-label">Contact Person *</label>
+                        <input type="text" id="contact_name" name="Contact Person" class="form-input mt-1" required>
+                    </div>
+                    <div>
+                        <label for="company_name" class="form-label">Company Name</label>
+                        <input type="text" id="company_name" name="Company Name" class="form-input mt-1">
+                    </div>
+                    <div>
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" name="Phone" class="form-input mt-1">
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input mt-1" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submission -->
+            <div class="mt-10 text-center">
+                <button type="submit" class="submit-button text-white font-bold py-3 px-8 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 transform hover:scale-105">
+                    Generate & Copy Email Content
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Modal for Email Content -->
+    <div id="emailModal" class="modal fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+      <div class="relative top-1/2 -translate-y-1/2 mx-auto p-5 border w-full max-w-2xl shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+          <h3 class="text-lg leading-6 font-medium text-gray-900">Email Content Generated</h3>
+          <div class="mt-4 px-2 sm:px-7 py-3 text-left">
+            <p class="text-sm text-gray-600 mb-2">
+              1. Click the button below to copy the email content.
+            </p>
+             <p class="text-sm text-gray-600 mb-4">
+              2. Open your email client and paste this into a new email to <strong class="text-gray-800">enquiry@xjeralabs.com</strong>
+            </p>
+            <textarea id="emailBodyContent" rows="12" class="w-full p-2 border rounded-md bg-gray-50 text-sm" readonly></textarea>
+          </div>
+          <div class="items-center px-4 py-3 space-y-2 sm:space-y-0 sm:flex sm:space-x-4">
+            <button id="copyButton" class="w-full sm:w-auto flex-1 px-4 py-2 text-white text-base font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2" style="background-color: var(--xcare-blue-900);">
+              Copy Content
+            </button>
+            <button id="closeModalButton" class="w-full sm:w-auto flex-1 mt-2 sm:mt-0 px-4 py-2 bg-gray-200 text-gray-800 text-base font-medium rounded-md shadow-sm hover:bg-gray-300 focus:outline-none">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="text-center p-4 mt-8">
+        <p class="text-sm text-gray-600">
+            Contact us directly at: <a href="mailto:enquiry@xjeralabs.com" class="font-medium text-blue-700 hover:underline">enquiry@xjeralabs.com</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('confirmationForm');
+            const modal = document.getElementById('emailModal');
+            const emailBodyContent = document.getElementById('emailBodyContent');
+            const copyButton = document.getElementById('copyButton');
+            const closeModalButton = document.getElementById('closeModalButton');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // --- Gather all form data into a structured document ---
+                const formData = new FormData(event.target);
+                let emailBody = "Dear Xjeralabs Team,\n\n";
+                emailBody += "A customer has submitted the following quotation confirmation. Please see the details below:\n\n";
+                emailBody += "================================================\n";
+                emailBody += "   CUSTOMER CONFIRMATION & REQUIREMENTS\n";
+                emailBody += "================================================\n\n";
+
+                // Contact Information
+                emailBody += "--- CONTACT INFORMATION ---\n";
+                emailBody += `Contact Person: ${formData.get('Contact Person') || 'Not provided'}\n`;
+                emailBody += `Company Name: ${formData.get('Company Name') || 'Not provided'}\n`;
+                emailBody += `Email: ${formData.get('email') || 'Not provided'}\n`;
+                emailBody += `Phone: ${formData.get('Phone') || 'Not provided'}\n\n`;
+
+                // Operational Details
+                emailBody += "--- OPERATIONAL DETAILS ---\n";
+                emailBody += `Leather Hide Dimensions: ${formData.get('Leather Hide Dimensions') || 'Not provided'}\n`;
+                emailBody += `Shifts per Day: ${formData.get('Shifts per Day') || 'Not provided'}\n`;
+                emailBody += `Target Hides per Hour: ${formData.get('Hides per Hour') || 'Not provided'}\n\n`;
+
+                // Baseline Configuration Confirmation
+                emailBody += "--- BASELINE CONFIGURATION CONFIRMED ---\n";
+                emailBody += `Work Area (2.5x4.5 m): ${formData.get('Confirmation: Work Area') ? 'YES' : 'NO'}\n`;
+                emailBody += `Metal Conveyor Belt: ${formData.get('Confirmation: Conveyor Belt') ? 'YES' : 'NO'}\n`;
+                emailBody += `Pure Waterjet Process: ${formData.get('Confirmation: Process') ? 'YES' : 'NO'}\n`;
+                emailBody += `First-Year Consumables: ${formData.get('Confirmation: Consumables') ? 'YES' : 'NO'}\n\n`;
+                
+                emailBody += "------------------------------------------------\n\n";
+                emailBody += "Best regards,\n";
+                emailBody += "Xjeralabs Website Form\n";
+                
+                // Populate and show the modal
+                emailBodyContent.value = emailBody;
+                modal.classList.remove('hidden');
+            });
+
+            copyButton.addEventListener('click', function() {
+                emailBodyContent.select();
+                try {
+                    // Modern way to copy text
+                    navigator.clipboard.writeText(emailBodyContent.value).then(() => {
+                        copyButton.textContent = 'Copied!';
+                        setTimeout(() => { copyButton.textContent = 'Copy Content'; }, 2000);
+                    }).catch(err => {
+                        // Fallback for environments where navigator.clipboard is not available
+                        document.execCommand('copy');
+                        copyButton.textContent = 'Copied!';
+                        setTimeout(() => { copyButton.textContent = 'Copy Content'; }, 2000);
+                    });
+                } catch (err) {
+                    // Older fallback
+                    document.execCommand('copy');
+                    copyButton.textContent = 'Copied!';
+                    setTimeout(() => { copyButton.textContent = 'Copy Content'; }, 2000);
+                }
+            });
+
+            closeModalButton.addEventListener('click', function() {
+                modal.classList.add('hidden');
+            });
+
+            // Close modal if clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
